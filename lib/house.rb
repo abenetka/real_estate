@@ -37,9 +37,12 @@ attr_reader :price, :address, :rooms
       room.area
     end
 
+    def rooms_by_category
+      rooms_by_category = {}
+
+    end
+
   end
-
-
 
 
 end
