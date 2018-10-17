@@ -27,5 +27,15 @@ attr_reader :price, :address, :rooms
     room_area.sum
   end
 
+  def price_per_square_foot
+    pricey = price.gsub(/\D/,'')
+    (pricey.to_i / area.to_f).round(2)
+
+
+
+
+  end
+
+
 
 end
