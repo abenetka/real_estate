@@ -28,13 +28,17 @@ attr_reader :price, :address, :rooms
   end
 
   def price_per_square_foot
-    pricey = price.gsub(/\D/,'')
-    (pricey.to_i / area.to_f).round(2)
+    sani_price = price.gsub(/\D/,'')
+    (sani_price.to_i / area.to_f).round(2)
+  end
 
-
-
+  def rooms_sorted_by_area
+    @rooms.sort_by do |room|
+      room.area
+    end
 
   end
+
 
 
 
