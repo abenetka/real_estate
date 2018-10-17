@@ -12,15 +12,19 @@ attr_reader :price, :address, :rooms
 
   def rooms_from_category(category)
     rooms_from_category = []
-    # binding.pry
     @rooms.each do |room|
       if room.category == category
         rooms_from_category << room
       end
     end
-    # binding.pry
     rooms_from_category
+  end
 
+  def area
+    room_area = @rooms.map do |room|
+      room.area
+    end
+    room_area.sum
   end
 
 
